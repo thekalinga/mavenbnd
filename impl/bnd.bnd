@@ -1,0 +1,21 @@
+-buildpath: \
+	osgi.core,\
+	osgi.cmpn,\
+	${junit}
+
+-includeresource: src/main/resources/sample
+
+Service-Component:  \
+	*
+
+-outputmask: ${@bsn}-${version;===S;${@version}}.jar
+
+Bundle-Version: 0.0.1-SNAPSHOT
+
+bin: target/classes
+src: src/main/java
+target-dir: target
+testbin: target/test-classes
+testsrc: src/main/test
+Private-Package:  \
+	com.acme.bnd.mvn.core.impl
